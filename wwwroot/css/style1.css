@@ -1,0 +1,132 @@
+﻿body {
+    background-color: #b8f2ff; /* Background color for the entire page */
+}
+.report-issues-container {
+    width: 100%;
+    padding: 0; /* Remove padding to let the header span full width */
+}
+
+/* Header Styling */
+.header {
+    background-image: url('/images/header.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    width: 110%; /* Make sure it spans the full width */
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+    .header h1 {
+        font-size: 48px; /* Make the font size larger */
+        margin-bottom: 10px;
+    }
+
+    .header p {
+        font-size: 24px; /* Increase font size for better readability */
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 80px); /* Adjusted for header */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #213B2A;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+label {
+    font-size: 1.1rem;
+    color: #213B2A;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #213B2A;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button[type="submit"]:hover {
+        background-color: #17491E;
+    }
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #888;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+    .btn-secondary:hover {
+        background-color: #666;
+    }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    button[type="submit"],
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}

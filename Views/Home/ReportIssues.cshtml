@@ -1,0 +1,66 @@
+﻿@model ST10095103_Part1_PROG7312_MunicipalityWebsite.Models.ReportIssueViewModel
+
+@{
+    ViewData["Title"] = "Report Issues";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/style1.css" />
+</head>
+<body>
+    <div class="report-issues-container">
+        <header class="report-header">
+            <!-- Include header content here if needed -->
+        </header>
+
+        <div class="form-page">
+            <form enctype="multipart/form-data" method="post">
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required />
+                </div>
+
+                <div>
+                    <label for="category">Select Category:</label>
+                    <select id="category" name="category" required>
+                        @if (Model.Categories != null && Model.Categories.Any())
+                        {
+                            @foreach (var category in Model.Categories)
+                            {
+                                <option value="@category.CategorySelectionId">@category.Categories</option>
+                            }
+                        }
+                        else
+                        {
+                            <option>No categories available</option>
+                        }
+                    </select>
+                </div>
+
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+                </div>
+
+                <div>
+                    <label for="media">Attach an image or document:</label>
+                    <input type="file" id="media" name="media" accept="image/*,application/pdf" required />
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+
+                <div>
+                    <a href="/Home/Index" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
